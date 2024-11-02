@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://kit.fontawesome.com/9055024f82.js" crossorigin="anonymous"></script>
+
+        <title>LuxeView Window Washing</title>
+
+        <link rel="icon" type="image/x-icon" href="logo.png">
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+
+                box-sizing: border-box;
+
+                color: white;
+                font-family: Arial;
+            }
+
+            body {
+                background: lightblue;
+            }
+
+            header {
+                position: relative;
+
+                height: calc(100vh - 100px);
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 100px;
+
+                padding: 0 100px;
+            }
+
+            header .bg {
+                position: absolute;
+                inset: 0;
+                height: 100%;
+                width: 100%;
+
+                overflow: hidden;
+                object-fit: cover;
+
+                filter: blur(3px);
+
+                z-index: -1;
+            }
+
+            header .title-text {
+                height: 75%;
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+            }
+
+            header .title-text .business-name {
+                font-size: 4em;
+            }
+
+            header .title-text .location {
+                display: flex;
+                gap: 0.5em;
+                font-size: 1.25em;
+            }
+
+            header .logo {
+                height: 75%;
+                aspect-ratio: 1;
+
+                filter: drop-shadow(0 10px 10px #00000080);
+
+                opacity: 0.2;
+            }
+
+            .banner {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+
+                height: 100px;
+
+                z-index: 10000;
+            }
+
+            .banner img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+
+                opacity: 0.5;
+            }
+
+            .reviews {
+                position: relative;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                row-gap: 100px;
+
+                padding: 100px 0;
+                padding-top: 200px;
+
+                background: linear-gradient(25deg, #4ABAEC, #277fa8);
+
+                z-index: -1;
+            }
+
+            .reviews .review-container {
+                width: 100%;
+
+                display: flex;
+                justify-content: center;
+            }
+
+            .reviews .review-container .review {
+                width: 75%;
+
+                background-color: #ffffff0d;
+                backdrop-filter: blur(5px);
+                border-radius: 10px;
+                border: solid rgba(173, 216, 230, 0.5) 1px;
+
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                padding: 25px;
+            }
+
+            .reviews .review-container .review .stars {
+                margin-bottom: 10px;
+            }
+
+            .reviews .review-container .review .stars i {
+                font-size: 1.5em;
+            }
+
+            .reviews .review-container .review .author {
+                color: lightgrey;
+            }
+
+            footer {
+                width: 100%;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                padding: 50px 0;
+
+                background: linear-gradient(25deg,#368cb3,#1d6e93);
+            }
+
+            footer .phone {
+                display: flex;
+                gap: 10px;
+            }
+
+            footer .developer a {
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            @media (max-width: 1100px) {
+                header {
+                    flex-direction: column;
+                    height: unset;
+                    padding: 100px 0;
+
+                    text-align: center;
+                }
+
+                header .title-text {
+                    align-items: center;
+                }
+
+                header .logo {
+                    height: unset;
+                    width: 75%;
+                }
+            }
+
+            @media (max-width: 800px) {
+                body {
+                    font-size: 0.75rem;
+                }
+
+                header .title-text .business-name {
+                    font-size: 2em;
+                }
+
+                .reviews {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <header>
+                <img class="bg" src="https://fincadoctor.com/images/bg-fenster.jpg" alt="Background">
+                <div class="title-text">
+                    <h1 class="business-name">LuxeView Window Washing</h1>
+                    <div class="location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>123 Example St</p>
+                    </div>
+                </div>
+                <img class="logo" src="logo.png" alt="Logo">
+            </header>
+            <section class="reviews">
+                <div class="banner">
+                    <img src="banner.png" alt="Banner">
+                </div>
+                <div class="review-container">
+                    <div class="review">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="text">
+                            <p>They look really nice thank you tyla, give me a call in about 6 months or less I’m real happy with your work!</p>
+                        </div>
+                        <div class="author">Steve</div>
+                    </div>
+                </div>
+                <div class="review-container">
+                    <div class="review">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="text">
+                            <p>They look amazing mate, I&apos;m glad to see a young fella getting out there and giving it a go, I love your prices and I’ll see ya again in about 3 months!</p>
+                        </div>
+                        <div class="author">Doug-M</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="phone">
+                <i class="fa-solid fa-phone"></i>
+                <p>+61 473 803 625</p>
+            </div>
+            <div class="developer">
+                <p>Built by <a href="https://16bitdevelopment.com" target="_blank">16 Bit Development</a></p>
+            </div>
+        </footer>
+    </body>
+</html>
